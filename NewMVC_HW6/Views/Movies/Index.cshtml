@@ -1,0 +1,195 @@
+﻿@model IEnumerable<NewMVC_HW6.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_critic_for_reviews)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.director_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_3_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_2_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_1_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gross)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_1_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_voted_users)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cast_total_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_3_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.facenumber_in_poster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plot_keywords)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_imdb_link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_user_for_reviews)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content_rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.budget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actor_2_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imdb_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aspect_ratio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movie_facebook_likes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director.Director_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_critic_for_reviews)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.director_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_3_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_2_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_1_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gross)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_1_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_voted_users)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cast_total_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_3_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.facenumber_in_poster)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plot_keywords)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_imdb_link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_user_for_reviews)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content_rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.budget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actor_2_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imdb_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aspect_ratio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movie_facebook_likes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director.Director_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Movie_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Movie_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Movie_Id })
+        </td>
+    </tr>
+}
+
+</table>

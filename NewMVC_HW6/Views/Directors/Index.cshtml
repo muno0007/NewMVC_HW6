@@ -1,0 +1,34 @@
+﻿@model IEnumerable<NewMVC_HW6.Director>
+
+@{
+    ViewBag.Title = "All Directors";
+}
+
+<h2>All Directors</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Director_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director_Name)
+        </td>
+        <td>
+            
+            @Html.ActionLink("Info", "Info", "Info", "Object Route Values", new{target = "_blank"})
+
+
+        </td>
+    </tr>
+}
+
+</table>
